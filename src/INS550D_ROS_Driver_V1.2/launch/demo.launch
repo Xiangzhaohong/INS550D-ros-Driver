@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="ins550d" type="ins550d_node" name="ins550d_node" required="true">
+    <param name="port" value="/dev/ttyUSB0"/>
+  </node>
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find ins550d)/rviz/demo.rviz" required="true"/>
+
+</launch>
